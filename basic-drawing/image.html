@@ -1,0 +1,12 @@
+<html> 
+    <body> 
+        <canvas width="800" height="600" id="canvas"></canvas> 
+        <script> 
+            var canvas = document.getElementById('canvas'); 
+            var c = canvas.getContext('2d'); 
+            var img = new Image(300,300);
+            img.src = "https://picsum.photos/300/300"
+            img.onload = () => c.drawImage(img, 0,0); 
+        </script> 
+    </body>
+</html> 
