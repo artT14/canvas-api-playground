@@ -1,0 +1,21 @@
+<html> 
+    <body> 
+        <canvas width="800" height="600" id="canvas"></canvas> 
+        <script> 
+            var canvas = document.getElementById('canvas'); 
+            var ctx = canvas.getContext('2d'); 
+            var img = new Image(25,25);
+            img.src = "https://picsum.photos/25/25";
+            img.onload = () => {
+                var pat1 = ctx.createPattern(img,'repeat');    
+                ctx.fillStyle = pat1;
+                ctx.fillRect(0,0,100,100);    
+
+                var pat2 = ctx.createPattern(img,'repeat-y');    
+                ctx.fillStyle = pat2;
+                ctx.translate(200,0);
+                ctx.fillRect(0,0,100,200);   
+            }
+        </script> 
+    </body>
+</html> 

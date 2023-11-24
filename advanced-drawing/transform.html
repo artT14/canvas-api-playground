@@ -1,0 +1,15 @@
+<html> 
+    <body> 
+        <canvas width="800" height="600" id="canvas"></canvas> 
+        <script> 
+            var canvas = document.getElementById('canvas'); 
+            var ctx = canvas.getContext('2d'); 
+            ctx.fillStyle = "red";
+            ctx.translate(50,50);
+            //convert degrees to radians
+            var rads = 30 * Math.PI*2.0/360.0;
+            ctx.rotate(rads)
+            ctx.fillRect(0,0,100,100);
+        </script> 
+    </body>
+</html> 
